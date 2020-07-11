@@ -19,6 +19,7 @@ These coding exercises are meant to help Spiff gain insight into how you would t
     - build on v1 to meet v2 requirements
     - create a pull request when finished
 4. The last commit is your end time
+5. Push your repo to Github and send a link to casey@spiff.com
 
 ### Guidelines
 
