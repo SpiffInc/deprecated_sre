@@ -1,5 +1,6 @@
 import React    from "react"
 import Exercise from "../exercise/Exercise"
+import ProgressBarComponent from "../components/progressbar.component"
 
 const ProgressBar = () => {
   return (
@@ -19,6 +20,10 @@ export default ProgressBar
 
 const Solution = () => {
   return (
-    // <div>Add solution here</div>
+    <div>
+       {/* <div>Add solution here</div> */}
+      <ProgressBarComponent />
+    </div>
+   
   )
 }
