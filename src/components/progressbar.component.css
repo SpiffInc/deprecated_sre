@@ -1,0 +1,52 @@
+.progress-container {
+    height: 6px;
+    border: 1px solid #e0e0fe;
+    margin: 30px auto;
+    box-shadow: 2px 2px rgba(15,102,89,0.2);
+}
+
+.progress {
+    height: 6px;
+    background-image: linear-gradient(to right, orange, red);
+    transition: width 15s linear 0.3s;
+}
+
+.finish {
+    height: 6px;
+    background-image: linear-gradient(to right, orange, red);
+    transition: width 1s linear 0.1s;
+}
+
+.button-area button {
+    height: 40px;
+    width: 150px;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    margin: 20px 40px 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button-area button.btn-green:hover,
+.button-area button.btn-red:hover  {
+    border: 2px solid;
+}
+
+.button-area button.btn-green:focus,
+.button-area button.btn-red:focus {
+    border: 3px solid;
+}
+
+.button-area button.btn-green {
+    border: 1px solid #00c1a6;
+    color: #00c1a6;
+}
+
+.button-area button.btn-red {
+    border: 1px solid red;
+    color: red;
+}

@@ -19,6 +19,6 @@ export default ProgressBar
 
 const Solution = () => {
   return (
-    <div>Add solution here</div>
+    // <div>Add solution here</div>
   )
 }
