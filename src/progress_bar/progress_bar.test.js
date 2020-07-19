@@ -1,4 +1,4 @@
-import { reducer } from "./ProgressBar";
+import reducer from "./reducer";
 
 test("initial status is `idle`", () => {
   const state = reducer();
