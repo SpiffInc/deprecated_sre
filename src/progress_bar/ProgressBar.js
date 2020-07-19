@@ -43,12 +43,14 @@ const Solution = () => {
 
   // Ticks every anim frame. This isn't the most performant way of doing
   // animation in react. A CSS animation might make more sense.
+  const frameRef = React.useRef();
   React.useEffect(() => {
-    requestAnimationFrame(() => {
+    frameRef.current = requestAnimationFrame(() => {
       if (state.status === "busy" && state.value <= HANG_AT_PERC) {
         dispatch({ type: "TICK" });
       }
     });
+    return () => cancelAnimationFrame(frameRef.current);
   }, [state.status, state.value]);
 
   // When progress completes, schedule the removal of the bar so it's not in the
