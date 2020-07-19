@@ -1,0 +1,68 @@
+@import "../shared_styles/colors.scss";
+
+.btn {
+  /*
+    RESET
+
+    Borrowed from Normalize.css via https://css-tricks.com/overriding-default-button-styles/
+   */
+
+  /**
+    1. Change the font styles in all browsers.
+    2. Remove the margin in Firefox and Safari.
+  */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1; /* 1 */
+  margin: 0; /* 2 */
+
+  /* Show the overflow in IE. */
+  overflow: visible;
+
+  /*
+    Remove the inheritance of text transform in Edge, Firefox, and IE.
+    Remove the inheritance of text transform in Firefox.
+  */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
+  /*
+    APPLICATION STYLES
+  */
+
+  box-sizing: border-box;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $green;
+
+  // Using border for the default 1px border. It looks nicer than a boxshadow in most cases.
+  // We use a box-shadow to expand the border on interactions. This keeps the button stationary,
+  // without having to specify a width.
+
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  height: 3.333em;
+  padding: 0 1.75em;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 1px currentColor;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px currentColor;
+  }
+}
+
+/*
+  Red button
+*/
+
+.btn-red {
+  color: $red;
+}
