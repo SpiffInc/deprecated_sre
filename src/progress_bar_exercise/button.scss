@@ -1,0 +1,34 @@
+@import "../shared_styles/colors.scss";
+
+.button {
+  border: 1px $green solid;
+  border-radius: 50px;
+  padding: 20px 35px;
+  color: $green;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: border-width 0.1s ease-in-out;
+  text-transform: uppercase;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+
+  &:hover {
+    border-width: 2px;
+  }
+
+  &:active {
+    border-width: 3px;
+  }
+
+  &:disabled {
+    color: $gray;
+    border-color: $gray;
+  }
+}
+
+.finish-button {
+  color: $red;
+  border-color: $red;
+}

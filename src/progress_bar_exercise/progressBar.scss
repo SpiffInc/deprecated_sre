@@ -1,0 +1,12 @@
+@import "../shared_styles/colors.scss";
+
+.progress-bar {
+  position: relative;
+  height: 6px;
+  transition: opacity 3s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.hide {
+  opacity: 0;
+}
