@@ -24,12 +24,12 @@ export default ProgressBarExercise;
 // ----------------------------------------------------------------------------------
 
 const Solution = () => {
-  const [progress, setProgress] = useState(1);
+  const [progress, setProgress] = useState(0);
   const [start, setStart] = useState(false);
   const [text, setText] = useState("Start Request");
 
   useEffect(() => {
-    if (progress !== 0 && progress < 90) {
+    if (progress > 1 && progress < 90) {
       getRequestStatus();
       setText("...Loading");
     }
@@ -43,7 +43,7 @@ const Solution = () => {
   }, [progress]);
 
   function startRequest() {
-    const startProgress = 1;
+    const startProgress = 3;
     setStart(true);
     setProgress(startProgress);
   }
