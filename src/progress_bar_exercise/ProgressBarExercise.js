@@ -5,8 +5,6 @@ import Exercise from "../exercise/Exercise";
 import ProgressBar from "./ProgressBar";
 import Button from "./Button";
 
-import "./progressBarExercise.scss";
-
 const ProgressBarExercise = () => {
   return (
     <div className="progress-bar-exercise">
