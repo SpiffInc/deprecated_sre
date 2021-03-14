@@ -18,19 +18,15 @@ describe("ProgressBarExercise Solution", () => {
     });
   })
 
-  it('removes progress bar after clicking finish request', async () => {
-    const { getByText, queryByRole } = render(<Solution />);
-    const finishRequestBtn = getByText("Finish Request")
-    fireEvent.click(finishRequestBtn)
-    await wait(() => {
-      expect(queryByRole("progressbar")).not.toBeInTheDocument();
-    });
-  })
-
-  it('adds transition styling when finishing the request', () => {
+  it("removes progress bar after clicking finish request", async () => {
     const { getByText, getByRole } = render(<Solution />);
-    const finishRequestBtn = getByText("Finish Request")
-    fireEvent.click(finishRequestBtn)
-    expect(getByRole("progressbar")).toHaveStyle('transition: width 1s ease, opacity 3s ease-in-out')
-  })
+    const startRequestBtn = getByText("Start Request");
+    fireEvent.click(startRequestBtn);
+    const finishRequestBtn = getByText("Finish Request");
+    fireEvent.click(finishRequestBtn);
+    expect(getByRole("progressbar")).toHaveStyle(
+      `transition: width 1s ease, opacity 3s ease-in-out; 
+      opacity: 0`
+    );
+  });
 });
