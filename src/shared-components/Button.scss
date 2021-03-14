@@ -1,0 +1,26 @@
+@import "../shared_styles/colors.scss";
+
+.btn {
+  font-family: inherit;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 0px 5px;
+  &:hover {
+    border-width: 2px;
+  }
+  &:active {
+    border-width: 3px;
+  }
+}
+
+.defaultBtn {
+  @extend .btn;
+  color: $green;
+}
+
+.warningBtn {
+  @extend .btn;
+  color: $red;
+}
