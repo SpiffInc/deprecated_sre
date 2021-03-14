@@ -7,7 +7,9 @@ export const ProgressBar = ({ currentPercentage }) => {
     <div
       style={{
         width: `${currentPercentage}%`,
-        transition: finished ? "width 1s ease, opacity 3s ease-in-out" : undefined,
+        transition: finished
+          ? "width 1s ease, opacity 3s ease-in-out"
+          : undefined,
         opacity: finished ? 0 : 1,
       }}
       className="progress-bar"
