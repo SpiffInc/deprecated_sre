@@ -20,6 +20,8 @@ describe("ProgressBarV1", () => {
 
   it("removes progress bar after clicking finish request", async () => {
     const { getByText, getByRole } = render(<ProgressBarV1 />);
+    const startRequestBtn = getByText("Start Request");
+    fireEvent.click(startRequestBtn);
     const finishRequestBtn = getByText("Finish Request");
     fireEvent.click(finishRequestBtn);
     expect(getByRole("progressbar")).toHaveStyle(
